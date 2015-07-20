@@ -1,0 +1,58 @@
+<ion-modal-view>
+			<!--Header con titulo y boton -->
+  		<ion-header-bar>
+				<!--Titulo-->
+   			<h1 class="title">Información</h1>
+				<!--Boton de cierre -->
+				<div class="button button-clear" ng-click="modal.hide()">
+					<span class="icon ion-close"></span>
+				</div>
+  		</ion-header-bar>
+			<!--Contenido-->
+  		<ion-content>
+				<!--Lista con cada elemento -->
+			<div class="list">
+				<!--Marca-->
+				<a class="item item-icon-left" href="#">
+						<!--Icono-->
+			    	<i class="icon fa fa-bookmark-o"></i>
+			   			Marca
+							<!--Datos recibidos desde la API -->
+						<span class="item-note" style="color: #4E8EF7">
+							{{qrdata.marca}}
+						</span>
+				<!--Modelo-->
+				<a class="item item-icon-left" href="#">
+						<i class="icon fa fa-cube"></i>
+							Modelo
+						<span class="item-note" style="color: #4E8EF7">
+							{{qrdata.modelo}}
+						</span>
+				</a>
+				<!--Nº de serie-->
+				<a class="item item-icon-left" href="#">
+					<i class="icon fa fa-barcode"></i>
+						Nº de serie
+					<span class="item-note" style="color: #4E8EF7">
+						{{qrdata.serial}}
+					</span>
+				</a>
+				<!--Fecha de compra-->
+				<a class="item item-icon-left" href="#">
+					<i class="icon fa fa-calendar"></i>
+						Fecha de compra
+					<span class="item-note" style="color: #4E8EF7">
+						{{qrdata.fechacompra | date:'dd MMM yyyy' }}
+					</span>
+				</a>
+				<!--Cliente-->
+				<a class="item item-icon-left" href="#">
+					<i class="icon fa fa-user"></i>
+						Cliente
+					<span class="item-note" style="color: #4E8EF7">
+						{{qrdata.cliente}}
+					</span>
+				</a>
+			</div>
+		</ion-content>
+</ion-modal-view>

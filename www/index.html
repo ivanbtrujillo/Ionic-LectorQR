@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <!--Librería de iconos font-awesome -->
+    <link href="lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- CORDOVA-->
+    <script src="cordova.js"></script>
+    <!-- NG CORDOVA -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+
+  </head>
+  <body ng-app="lector">
+      <!--Barra de información superior-->
+      <ion-nav-bar class="bar-stable">
+        <!--Boton para volver a la vista anterior-->
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+      </ion-nav-bar>
+
+      <!--Contenedor donde mostraremos las vistas -->
+      <ion-nav-view></ion-nav-view>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<ion-view>
+  <ion-content style="text-align: center">
+    <div class="item">
+      <!--Donde mostramos el QR -->
+      <img ng-src="{{qr || 'img/ionic.png' }}" height="120px" >
+      <h2>Generador de QR</h2>
+
+      <!--Formulario. Cada campo se referencia a una propiedad del objeto qrcode -->
+      <div class="List">
+        <label class="item item-input item-select">
+            <div class="input-label" style="text-align:left">
+              Marca
+            </div>
+            <select ng-model="qrcode.marca"
+                ng-options="opt as opt.label for opt in options">
+            </select>
+        </label>
+
+        <label class="item item-input">
+            <div class="input-label" style="text-align:left">
+              Modelo
+            </div>
+            <input type="text" ng-model="qrcode.modelo" name="modelo">
+        </label>
+
+        <label class="item item-input">
+          <div class="input-label" style="text-align:left">
+            Nº de serie
+          </div>
+          <input type="text" name="serial" ng-model="qrcode.serial" >
+        </label>
+
+        <label class="item item-input">
+          <div class="input-label" style="text-align:left">
+            Fecha de compra
+          </div>
+          <input name="fechacompra" type="date" ng-model="qrcode.fechacompra"
+              placeholder="Fecha de compra">
+        </label>
+
+          <label class="item item-input">
+            <div class="input-label" style="text-align:left">
+              Cliente
+            </div>
+          <input type="text" name="cliente" ng-model="qrcode.cliente"></input>
+        </label>
+
+        <!--Boton. Pasamos el objeto qrcode por parametro -->
+        <button class="button button-positive button-block"
+            ng-click="generarCodigo(qrcode)">
+          Generar
+        </button>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
